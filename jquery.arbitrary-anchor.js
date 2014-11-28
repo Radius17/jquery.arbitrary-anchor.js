@@ -17,7 +17,7 @@
 
 	// Document ready?
 	// Well then do the magic.
-	$(document).ready(function() {
+	$(window).load(function() {
 		// Grab our elements.
 		$window = $(window);
 		$document = $(this);
@@ -95,6 +95,9 @@
 			$bodhtml.stop(true, false).animate({
 				scrollTop : top
 			}, parseInt(animationTime), window.AA_CONFIG.easingFunction);
+			var top2 = $el.offset().top - window.AA_CONFIG.scrollOffset;
+			console.log(top);
+			console.log(top2);
 		}
 	}
 })(window, jQuery)
